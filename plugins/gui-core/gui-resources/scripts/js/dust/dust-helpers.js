@@ -363,6 +363,7 @@ var helpers = {
 dust.helpers = helpers;
 
 dust.filters.t = function(string){ return $('<div>'+string+'</div>').text(); }
+dust.filters.trim50 = function(string){ return string.trunc(50, true);}
 dust.filters.twitter_all = function(string) { return twitter.link.all(string); }
 
 dust.filters.o = function(string){ console.log(string); return ''; }
