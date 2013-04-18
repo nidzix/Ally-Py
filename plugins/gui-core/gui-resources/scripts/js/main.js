@@ -24,8 +24,16 @@ requirejs.config
 		'gizmo': config.cjs('gizmo'),
 		'loadaloha': config.cjs('aloha-init'),
 		'concat': config.cjs('concat'),		
-		'newgizmo': config.cjs('newgizmo')		
-	}
+		'newgizmo': config.cjs('newgizmo'),
+		'backbone': config.cjs('backbone'),
+        'underscore': config.cjs('underscore')		
+	},
+    shim: {
+        'backbone': {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        }
+    }
 });
 require(['concat'], function(){
 	require
